@@ -1,6 +1,10 @@
 <h1> <%=  @article.title  %></h1>
+<p> <%=  @article.body  %></p>
+<% unless @article.user.nil? %>
 
+<p>Written by <%=  @article.user.email  %></p>
 
-  <p> <%=  @article.body  %></p>
+<% end %>
+
 
 
