@@ -2,6 +2,10 @@
 <h1><%= article.title %> </h1>
 <div>
   <%= article.body %> - <%= link_to "Delete", article, method: :delete %>
+  <% unless article.user.nil? %>
+  <p> Written by <%=  article.user.email  %></p>
+  <% end %>
+  <br>
 </div>
 <% end %>
 

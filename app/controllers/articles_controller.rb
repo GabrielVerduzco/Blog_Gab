@@ -15,15 +15,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(title: params[:article][:title],
-                                body: params[:article][:body])
-  if @article.save
-
-    redirect_to @article
-
-  else
-    render :new
-  end
+    @article = current_user.articles.new(article_param)
+    if @article.save
+      redirect_to @article
+    else
+      render :new
+    end
   end
 
   def update
