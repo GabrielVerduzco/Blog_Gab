@@ -1,0 +1,20 @@
+<h1> Post, your article!!! </h1>
+<!--objeto del modelo-->
+<%= form_for(@article) do |f| %>
+
+<div class="container">
+  <div>
+    <%= f.text_field :title, placeholder:"Title", class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.text_area :body, placeholder:"Write your content", class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.submit "Publish", class: "btn btn-primary btn-lg btn-block"     %>
+  </div>
+
+</div>
+<%end%>
+

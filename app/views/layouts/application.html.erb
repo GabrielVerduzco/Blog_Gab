@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gabriel's Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+
+          <a class="navbar-brand" href="#">Gabriel's blog</a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to "Technology", root_path %>
+            </li>
+            <li><a href="#">Memes</a></li>
+            <li><a href="#">Ping Pong</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Music<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Rock</a></li>
+                <li><a href="#">Rap</a></li>
+                <li><a href="#">Metal</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="signin" class="navbar-form navbar-right" role="form">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">
+            </div>
+
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
