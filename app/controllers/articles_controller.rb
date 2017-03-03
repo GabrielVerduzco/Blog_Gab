@@ -11,6 +11,9 @@ class ArticlesController < ApplicationController
 
   #Get /articles/:id
 
+  def edit
+
+  end
 
   def new
     @article = Article.new
@@ -27,6 +30,12 @@ class ArticlesController < ApplicationController
 
   def update
 
+
+   if @article.update_attributes(article_param)
+     redirect_to @article
+   else
+     render :edit
+   end
   end
 
   def destroy
@@ -38,7 +47,7 @@ class ArticlesController < ApplicationController
   private
 
   #def validate_user
-    #redirect_to new_user_session_path, notice: "You must have a session"
+  #redirect_to new_user_session_path, notice: "You must have a session"
   #end
 
   def set_article
