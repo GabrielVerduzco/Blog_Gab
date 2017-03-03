@@ -2,8 +2,10 @@
 
 one:
   user: one
+  article: one
   body: MyText
 
 two:
   user: two
+  article: two
   body: MyText

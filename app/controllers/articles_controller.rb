@@ -11,6 +11,11 @@ class ArticlesController < ApplicationController
 
   #Get /articles/:id
 
+
+  def show
+    @comment = Comment.new
+  end
+
   def edit
 
   end
