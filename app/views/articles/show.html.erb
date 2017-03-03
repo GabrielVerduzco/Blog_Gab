@@ -3,8 +3,8 @@
 <% unless @article.user.nil? %>
 
 <p>Written by <%=  @article.user.email  %></p>
-<%= link_to "Edit!", edit_article_path(@article) %>
+
 <% end %>
 
-
+<%= link_to "Edit!", edit_article_path(@article) %>
 
