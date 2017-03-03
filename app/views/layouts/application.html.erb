@@ -17,18 +17,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li>
-              <%= link_to "Technology", root_path %>
+              <%= link_to "All post", articles_path %>
             </li>
-            <li><a href="#">Memes</a></li>
-            <li><a href="#">Ping Pong</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Music<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Rock</a></li>
-                <li><a href="#">Rap</a></li>
-                <li><a href="#">Metal</a></li>
-              </ul>
-            </li>
+
             <% if user_signed_in? %>
             <li>
               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
