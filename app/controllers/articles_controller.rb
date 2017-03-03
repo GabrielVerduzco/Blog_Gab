@@ -11,6 +11,11 @@ class ArticlesController < ApplicationController
 
   #Get /articles/:id
 
+
+  def show
+    @comment = Comment.new
+  end
+
   def edit
 
   end
@@ -20,8 +25,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.articles.new(article_param)
-    if @article.save
+      if @article.save
       redirect_to @article
     else
       render :new
